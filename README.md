@@ -2,7 +2,6 @@
 
 A visually appealing habit tracking application featuring a unique wheel-based interface to help you build and maintain daily, weekly, and monthly habits.
 
-![Demo Screenshot - Add one later](https://github.com/user-attachments/assets/72b68130-0fb8-417a-8782-0541de1e6d61)
 
 ## Features ✨
 
@@ -43,17 +42,7 @@ That's it! No build process or dependencies required.
    - Export: Click 'Export CSV' to save your data
    - Import: Click 'Import CSV' to restore previous data
 
-## Contributing 🤝
 
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## License 📄
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
