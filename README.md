@@ -2,6 +2,9 @@
 
 A visually appealing habit tracking application featuring a unique wheel-based interface to help you build and maintain daily, weekly, and monthly habits.
 
+![Screenshot 2025-05-18 000245](https://github.com/user-attachments/assets/a433c609-e584-47ed-a976-f35b7ff39abf)
+
+
 
 ## Features ✨
 
