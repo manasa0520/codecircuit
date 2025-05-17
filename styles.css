@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, #fdfbfb, #ebedee);
+    font-family: 'Poppins', sans-serif;
+    color: #2c3e50;
+}
+
+/* Main container */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+/* Month Input */
+#monthInput {
+    font-size: 1.5em;
+    padding: 8px 14px;
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+    background-color: #f1f3f5;
+}
+
+#monthInput:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0,123,255,0.25);
+}
+
+/* File buttons */
+.file-controls {
+    display: flex;
+    gap: 10px;
+}
+
+button,
+.add-habit {
+    background: linear-gradient(135deg, #007bff, #3399ff);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover,
+.add-habit:hover {
+    background: linear-gradient(135deg, #0056b3, #1e88e5);
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.4);
+    transform: translateY(-1px);
+}
+
+/* Main layout */
+main {
+    display: flex;
+    gap: 40px;
+    flex-direction: row-reverse;
+}
+
+/* Habits panel */
+.habits-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Habit wheel container */
+.habit-wheel-container {
+    flex: 1.2;
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+}
+
+#habitWheel {
+    width: 100%;
+    height: auto;
+}
+
+/* Habit input section */
+.habit-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.habit-input input {
+    flex: 1;
+    padding: 10px 14px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #f8f9fa;
+}
+
+.habit-input input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0,123,255,0.2);
+}
+
+/* Habit items */
+.habit-item {
+    padding: 14px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease;
+}
+
+.habit-item:hover {
+    transform: scale(1.01);
+}
+
+/* Habit checkbox wrapper */
+.habit-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+/* Week boxes */
+.week-boxes {
+    display: flex;
+    gap: 5px;
+}
+
+.week-box {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    background-color: white;
+}
+
+.week-box:hover {
+    background-color: #e9ecef;
+}
+
+.week-box.checked {
+    background-color: #007bff;
+    color: white;
+    box-shadow: 0 0 5px rgba(13, 110, 253, 0.5);
+    transform: scale(1.05);
+}
+
+.week-box.checked .week-number {
+    color: white;
+}
+
+/* Wheel segment */
+.wheel-segment {
+    cursor: pointer;
+    fill: #f0f0f0;
+    stroke: #ccc;
+    stroke-width: 1;
+    transition: fill 0.2s ease;
+    opacity: 1;
+}
+
+.wheel-segment:hover {
+    fill: #f1f3f5;
+    stroke: #007bff;
+    stroke-width: 1.5;
+    filter: drop-shadow(0 0 3px rgba(0, 123, 255, 0.3));
+}
+
+.wheel-segment.completed {
+    fill-opacity: 1;
+    opacity: 1;
+}
+
+/* Labels */
+.habit-label {
+    margin: 5px 0;
+    padding: 5px;
+    background-color: #f8f9fa;
+    border-radius: 3px;
+}
+
+.date-label {
+    font-size: 12px;
+    fill: #666;
+    pointer-events: none;
+    font-family: Arial, sans-serif;
+}
+
+.week-number {
+    font-size: 14px;
+    color: #495057;
+    pointer-events: none;
+}
+
+.habit-wheel-label {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: Arial, sans-serif;
+}
+
+.habit-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 5px 0;
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.legend-text {
+    font-size: 14px;
+    color: #333;
+}
+
+.connecting-line {
+    opacity: 0.7;
+}
+
+.habit-ring {
+    isolation: isolate;
+}
+
+/* Monthly summary */
+.monthly-summary {
+    padding: 20px;
+    background-color: #fefefe;
+    border-radius: 12px;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+}
+
+.monthly-summary h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Summary item */
+.summary-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+}
+
+/* Summary progress */
+.summary-label {
+    flex: 1;
+    font-weight: 500;
+}
+
+.summary-progress {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 10px;
+}
+
+.progress-bar {
+    width: 120px;
+    height: 8px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #0d6efd;
+    animation: fillGrow 1s ease forwards;
+}
+
+@keyframes fillGrow {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.progress-text {
+    min-width: 80px;
+    text-align: right;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Delete habit button */
+.delete-habit {
+    background-color: transparent;
+    color: #dc3545;
+    padding: 0 8px;
+    font-size: 20px;
+    line-height: 1;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.delete-habit:hover {
+    color: #bd2130;
+}
+
+/* Headings */
+h2 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
